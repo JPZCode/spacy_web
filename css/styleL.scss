@@ -1,6 +1,6 @@
-body{
+/*body{
 	background-color: #18BC9C;
-}
+}*/
 .loader{
 	position: fixed;
 	top: 0;
@@ -9,9 +9,11 @@ body{
 	right: 0;
 	margin: auto;
 	height: 100px;
+	width: 100px;
 	padding: 0;
 	list-style-type: none;
 	border: 1px solid red;
+
 	li{
 		position: absolute;
 		top: -50%;
@@ -23,6 +25,8 @@ body{
 		width: 10px;
 		border-radius: 500px;
 		border: 1px solid red;
+		animation: rotate 2s ease-in-out ifinite;
+
 		&::after{
 			content:"";
 			position: absolute;
@@ -35,17 +39,29 @@ body{
 			border: 1px solid green;
 		}
 	}
-	
-	@for $1 from 1 through 4{
-		li:nth-child(#{$i})px;
-		&::after;{
-			height: #{$i*5}px;
-			width: #{$i*5}px;
-			box-shadow:
-			#{$i*15}px 0px 1px #2196f3;
-			#{-$i*15}px 0px 1px #f44336;
-			0px #{$i*15}px 1px #ffeb3b;
-			0px #{-$i*15}px 1px #ff9800;
-		}
+
+@for $i from 1 through 4{
+		li:nth-child(#{$i})px{
+			animation-delay: #{$i*0.15}s;
+			&::after{
+				height: #{$i*5}px;
+				width: #{$i*5}px;
+				box-shadow:
+				#{$i*15}px 0px 1px #2196f3,
+				#{-$i*15}px 0px 1px #f44336,
+				0px #{$i*15}px 1px #ffeb3b,
+				0px #{-$i*15}px 1px #ff9800;
+			}
+		}	
 	}
+}
+
+@keyframes rotate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+
 }
