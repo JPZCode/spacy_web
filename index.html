@@ -10,8 +10,9 @@
     <title>Lex-S</title>
 
     <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="css/loaders.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,700,400italic,700italic" rel="stylesheet">
     <link href="css/freelancer.min.css" rel="stylesheet">
   </head>
 
@@ -58,8 +59,18 @@
           	<div class="form-group">
             	<input class="btn btn-xl btn-outline-light" type="submit" name="send" value="Preguntar">
           	</div>
-
         </form>
+
+        <div class="loader">
+          <div class="loader-inner pacman">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
+
       </div>
     </header>
 
@@ -182,6 +193,7 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/loaders.css.js"></script>
 
   </body>
 
