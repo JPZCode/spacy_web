@@ -765,7 +765,9 @@
     opacity: 1; } }
 
 .ball-grid-beat {
-  width: 57px; }
+  width: 57px; 
+  margin-left: 47%;
+}
   .ball-grid-beat > div:nth-child(1) {
     -webkit-animation-delay: 0.15s;
             animation-delay: 0.15s;
@@ -1639,7 +1641,10 @@
             transform: translate(-100px, -6.25px); } }
 
 .pacman {
-  position: relative; }
+  position: relative;
+  margin-left: 50%; !important;
+  margin-bottom: -20px;
+}
   .pacman > div:nth-child(2) {
     -webkit-animation: pacman-balls 1s -0.99s infinite linear;
             animation: pacman-balls 1s -0.99s infinite linear; }
